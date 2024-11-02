@@ -1,14 +1,14 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
+require('dotenv').config();
 //database
 const connection = require('./db');
 const app = express();
-const PORT = 3000;
+
 
 //middleware 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'app')))
+app.use(express.static(path.join(__dirname, 'app')));
 
 
 // Define the /home route
@@ -164,9 +164,11 @@ app.delete('/api/deleteCard', async (req, res) => {
 })
 
 
+const PORT = process.env.APP_PORT || 3000;
+const HOST = process.env.APP_HOST || 'localhost';
 
 // Start the server
 app.listen(PORT, 'localhost', () => {
-  console.log(`Listening on http://localhost:${PORT}/home`);
+  console.log(`Listening on http://${HOST}:${PORT}`);
 });
 
