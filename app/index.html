@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+    <footer class="navigation fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light nav-bar-bg">
+        <a class="navbar-brand" href="/home">
+          <img src="./DALL·E 2024-10-28 17.17.22.webp" width="30" height="30" alt="Bootstrap Logo" loading="lazy">
+          Expense Tracker</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/category">Category</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+  <!-- Main Content -->
+  <main class="main-area my-4">
+    <div class="container-fluid">
+      <!-- Expense Entry Form Section -->
+      <section class="row">
+        <div class="col-12 d-flex flex-row justify-content-center">
+          <p><span style="font-weight: 800;">Welcome! </span>to my very simple expense tracker.</p>
+        </div>
+        <div class="col-md-6 box-card">
+          <div class="box">
+            <h3 class="text-primary">Statistics</h3>
+            <p class="text-muted">See a breakdown of your spending habits.</p>
+            <div class="chart-container d-flex flex-row justify-content-center" style="position: relative; height:50vh; width:100%;">
+              <canvas id="myChart"></canvas>
+            </div>            
+          </div>
+        </div>
+        <div class="col-md-6 box-card">
+          <div class="box">
+            <h2 class="text-center text-primary mb-4">Add New Expense</h2>
+            <form autocomplete="off">
+              
+              <!-- Expense Title -->
+              <div class="input mb-3">
+                <label for="title">Expense Title</label>
+                <input type="text" name="title" id="title" placeholder="Enter expense title" required>
+              </div>
+
+              <!-- Amount -->
+              <div class="input mb-3">
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" id="amount" placeholder="Enter amount" required>
+              </div>
+
+              <!-- Category -->
+              <div class="input mb-3">
+                <label for="category">Category</label>
+                <select name="category" id="category" required>
+                  <option value="Food">Food</option>
+                  <option value="Transportation">Transportation</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Groceries">Groceries</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+
+              <!-- Date -->
+              <div class="input mb-3">
+                <label for="datetime">Date</label>
+                <input type="datetime-local" name="datetime" id="datetime" required>
+              </div>
+
+              <!-- Notes -->
+              <div class="input mb-3">
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes" rows="2" placeholder="Optional notes"></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="button-container">
+                <button type="button" onclick="submitForm(event)" class="btn">Add Expense</button>
+                <p id="displayError"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional Info or Recent Expenses -->
+      <section class="row mt-4">
+        <div class="col-12 mt-4">
+          <div  class="box d-flex flex-column">
+            <h3 class="text-primary">Recent Expenses</h3>
+            <div class="recent_expense_container">
+
+            </div>
+            <div class="button d-flex justify-content-center">
+              <button class="btn btn-secondary" onclick="window.location.href = '/category'">more -></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-3">
+          <h1>Programming languages used to build this mini project</h1>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h1>Front End</h1>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h1>Back End</h1>
+          <ul>
+            <li>Node js</li>
+            <li>Express js</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h1>Database</h1>
+          <ul>
+            <li>MYsql</li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <p>Follow me on linkedin <a href="https://www.linkedin.com/in/pretheevi-raj/" target="_blank">linkedin profile</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./script.js"></script>  
+</body>
+</html>

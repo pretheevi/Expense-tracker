@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #E0E5EC; /* Soft light grayish blue */
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-area{
+  margin-top: 6rem !important;
+}
+
+.box-card{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 100%;
+  height: 500px;
+  background-color: transparent; /* Muted Teal */
+  border-radius: 20px;
+  border: 2px solid #1F2A2C;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.nav-bar-bg {
+  background-color: #A2C3C5; /* Muted Teal */
+}
+
+.nav-bar-bg ul .nav-item {
+  margin-right: 3rem;
+}
+
+.nav-bar-bg a {
+  color: #2B3A3E !important; /* Deep Slate */
+  font-weight: 600;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0px;
+  color: #2B3A3E; /* Deep Slate */
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.input input:hover {
+  background-color: #D4E2E3; /* Lightened teal on hover */
+}
+
+.button-container {
+  text-align: center;
+  margin: 15px;
+}
+
+.button-container .btn {
+  background-color: #2B3A3E; /* Deep Slate */
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container .btn:hover {
+  background-color: #1F2A2C; /* Darker shade of Deep Slate */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+
+/* dynamic div add to container */
+.recent_expense h1{
+  font-size: 20px;
+  font-weight: 600;
+}
+.recent_expense_container{
+  overflow-y: hidden;
+}
+
+.totals input{
+  width: 5rem;
+  height: 1rem;
+  border-radius: 20px;
+  padding: 5px;
+}
+.totals label{
+  font-size: 0.7rem;
+}
+
+/* footer */
+.footer{
+  width: 100vw;
+  height: 100%;
+  color: #fff;
+  background-color: #1F2A2C;
+  padding: 20px;
+}
+.footer h1{
+  font-size: 20px;
+}
+.footer div{
+  align-items: center;
+}
+.footer ul li{
+  font-size: 15px;
+}

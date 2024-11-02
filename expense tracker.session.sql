@@ -1,0 +1,1 @@
+SELECT* from expense_tracker

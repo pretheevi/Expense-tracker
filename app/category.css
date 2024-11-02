@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-bg {
+  background-color: #A2C3C5; /* Muted Teal */
+}
+
+/* main area */
+.main-area{
+  margin-top: 2rem;
+}
+
+.expense_data_container{
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.expense-card{
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.heading{
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.sub-heading{
+  font-size: 1rem;
+  margin-top: 0px;
+}
