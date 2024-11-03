@@ -165,10 +165,9 @@ app.delete('/api/deleteCard', async (req, res) => {
 
 
 const PORT = process.env.APP_PORT || 3000;
-const HOST = process.env.APP_HOST || 'localhost';
+const HOST = process.env.APP_HOST || '0.0.0.0';
 
 // Start the server
-app.listen(PORT, 'localhost', () => {
+app.listen(PORT, HOST, () => {
   console.log(`Listening on http://${HOST}:${PORT}`);
 });
-
